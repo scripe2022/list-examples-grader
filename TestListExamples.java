@@ -9,7 +9,8 @@ public class TestListExamples {
         List<String> input1 = Arrays.asList(new String[]{"a", "c", "e"});
         List<String> input2 = Arrays.asList(new String[]{"b", "d", "f"});
         List<String> output = ListExamples.merge(input1, input2);
-        List<String> exp = Arrays.asList(new String[]{"a", "b", "c", "d", "e", "f"});
-        assertThat(output, is(exp));
+        // List<String> exp = Arrays.asList(new String[]{"a", "b", "c", "d", "e", "f"});
+        assertEquals(out.size(), 6);
+        assertThat(output, CoreMatchers.hasItems("a", "b", "c", "d", "e", "f"));
     }
 }
