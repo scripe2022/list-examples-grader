@@ -54,7 +54,6 @@
             window.open("grade?repo=" + repo, '_blank');
         }
         window.onload = function() {
-            input = document.getElementById("repo");
             input.addEventListener("keypress", function (e) {
                 if (e.key == "Enter") {
                     e.preventDefault;
