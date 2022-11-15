@@ -4,13 +4,51 @@
         #repo {
             width: 400px;
         }
+        .title {
+            margin-top: 20px;
+        }
+        .examples {
+            display: flex;
+            flex-direction: column;
+        }
+        p {
+            margin: 0;
+        }
+        .link:hover {
+            color: blue;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <input type="url" id="repo">
     <input type="button" value="run" onclick="runUnitTest()" id="run">
+    <div class="title">
+        Examples:
+    </div>
+    <div class="examples">
+    </div>
     <script>
+        const repositories = [
+            "https://github.com/ucsd-cse15l-f22/list-methods-lab3",
+            "https://github.com/ucsd-cse15l-f22/list-methods-corrected",
+            "https://github.com/ucsd-cse15l-f22/list-methods-compile-error",
+            "https://github.com/ucsd-cse15l-f22/list-methods-signature",
+            "https://github.com/ucsd-cse15l-f22/list-methods-filename",
+            "https://github.com/ucsd-cse15l-f22/list-methods-nested",
+            "https://github.com/ucsd-cse15l-f22/list-examples-subtle"
+        ]
         let input;
+        for (let i = 0; i < repositories.length; ++i) {
+            let p = document.createElement("p");
+            p.innerHTML = repositories[i];
+            p.classList.add("link");
+            p.onclick = function() {
+                input.value = repositories[i];
+            };
+            document.getElementsByClassName("examples")[0].append(p);
+        }
+
         function runUnitTest() {
             let repo = input.value;
             window.open("grade?repo=" + repo, '_blank');
