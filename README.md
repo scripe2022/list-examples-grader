@@ -7,7 +7,7 @@ chmod +x run.sh
 http://localhost:8081/
 ```
 
-# examples
+# Examples
 [http://localhost:8081/grade?repo=https://github.com/ucsd-cse15l-f22/list-methods-lab3](http://localhost:8081/grade?repo=https://github.com/ucsd-cse15l-f22/list-methods-lab3)  
 [http://localhost:8081/grade?repo=https://github.com/ucsd-cse15l-f22/list-methods-corrected](http://localhost:8081/grade?repo=https://github.com/ucsd-cse15l-f22/list-methods-corrected)  
 [http://localhost:8081/grade?repo=https://github.com/ucsd-cse15l-f22/list-methods-compile-error](http://localhost:8081/grade?repo=https://github.com/ucsd-cse15l-f22/list-methods-compile-error)  
