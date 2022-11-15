@@ -1,11 +1,5 @@
 <html>
 <head>
-    <script>
-        function runUnitTest() {
-            let repo = document.getElementById("repo").value;
-            window.open("grade?repo=" + repo, '_blank');
-        }
-    </script>
     <style>
         #repo {
             width: 400px;
@@ -14,6 +8,22 @@
 </head>
 <body>
     <input type="url" id="repo">
-    <input type="button" value="run" onclick="runUnitTest()">
+    <input type="button" value="run" onclick="runUnitTest()" id="run">
+    <script>
+        let input;
+        function runUnitTest() {
+            let repo = input.value;
+            window.open("grade?repo=" + repo, '_blank');
+        }
+        window.onload = function() {
+            input = document.getElementById("repo");
+            input.addEventListener("keypress", function (e) {
+                if (e.key == "Enter") {
+                    e.preventDefault;
+                    document.getElementById("run").click();
+                }
+            });
+        };
+    </script>
 </body>
 </html>
