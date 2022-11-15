@@ -16,4 +16,4 @@ chmod +x run.sh
 [http://localhost:8081/grade?repo=https://github.com/ucsd-cse15l-f22/list-examples-subtle](http://localhost:8081/grade?repo=https://github.com/ucsd-cse15l-f22/list-examples-subtle)
 
 # Demo
-[https://cse15l.jyh.sb/grade?repo=https://github.com/ucsd-cse15l-f22/list-methods-lab3](https://cse15l.jyh.sb/grade?repo=https://github.com/ucsd-cse15l-f22/list-methods-lab3)
+[https://cse15l.jyh.sb/](https://cse15l.jyh.sb/)
