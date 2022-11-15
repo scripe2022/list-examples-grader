@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script>
+        function runUnitTest() {
+            let repo = document.getElementById("repo").value;
+            window.open("grade?repo=" + repo, '_blank');
+        }
+    </script>
+    <style>
+        #repo {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <input type="url" id="repo">
+    <input type="button" value="run" onclick="runUnitTest()">
+</body>
+</html>

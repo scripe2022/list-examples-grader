@@ -32,7 +32,10 @@ class ExecHelpers {
 
 class Handler implements URLHandler {
     public String handleRequest(URI url) throws IOException {
-       if (url.getPath().equals("/grade")) {
+        if (url.getPath().equals("/")) {
+            return Files.readString(Paths.get("index.html"));
+        }
+        else if (url.getPath().equals("/grade")) {
            String[] parameters = url.getQuery().split("=");
            if (parameters[0].equals("repo")) {
                return ExecHelpers.exec(new String[]{"bash", "grade.sh", parameters[1]});
@@ -40,10 +43,10 @@ class Handler implements URLHandler {
            else {
                return "Couldn't find query parameter repo";
            }
-       }
-       else {
+        }
+        else {
            return "Don't know how to handle that path!";
-       }
+        }
     }
 }
 
