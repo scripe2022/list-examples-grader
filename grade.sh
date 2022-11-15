@@ -1,12 +1,10 @@
-# Create your grading script here
-
-# set -e
 CPATH=".:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar"
 DIR="submission"
-TESTFILE="TestListExamples.java"
+TESTJAVA="TestListExamples.java"
+TESTOBJ="${TESTJAVA%.*}"
 rm -rf $DIR
 git clone $1 $DIR
-cp $TESTFILE $DIR/
+cp $TESTJAVA $DIR/
 
 cd $DIR
 javac -cp $CPATH *.java 2> compile.error
@@ -21,4 +19,4 @@ if [[ $? -ne 0 ]]; then
     exit 1
 fi
 
-java -cp $CPATH org.junit.runner.JUnitCore $TESTFILE
+java -cp $CPATH org.junit.runner.JUnitCore $TESTOBJ
