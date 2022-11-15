@@ -4,7 +4,7 @@ git clone https://github.com/scripe2022/list-examples-grader.git
 cd list-examples-grader
 chmod +x run.sh
 ./run.sh 8081
-https://localhost:8081/
+http://localhost:8081/
 ```
 
 # examples
