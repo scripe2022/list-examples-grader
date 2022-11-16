@@ -11,7 +11,9 @@ TESTINFO=".unittest.error"
 GITINFO=".git.error"
 
 # git clone
-rm -rf $DIR
+if [[ -d $DIR ]]; then
+    rm -rf $DIR
+fi
 git clone $1 $DIR > /dev/null 2>$GITINFO
 if [[ $? -ne 0 ]]; then
     cat $GITINFO
