@@ -16,7 +16,7 @@ git clone $1 $DIR > /dev/null 2>$GITINFO
 if [[ $? -ne 0 ]]; then
     cat $GITINFO
     rm $GITINFO
-    exit
+    exit 3
 fi
 rm $GITINFO
 # file exist
