@@ -37,7 +37,7 @@ fi
 # run
 java -cp $CPATH org.junit.runner.JUnitCore $TESTOBJ > $TESTINFO
 # result
-result=`grep '^[.E]\+$' < .unittest.error`
+result=`grep '^[\.E]\+$' < .unittest.error`
 error=`grep -o 'E' <<<"$result" | grep -c .`
 total=`grep -o '\.' <<<"$result" | grep -c .`
 echo "$((total-error))/$total passed."
