@@ -30,6 +30,17 @@ public class TestListExamples {
         Lis2.add("f");
         assertArrayEquals(new String[]{"a","b","c","d","e","f"}, ListExamples.merge(Lis1, Lis2).toArray());
     }
+
+    @Test(timeout = 100)
+    public void testMergeDuplicated(){
+        List<String> Lis1 = new ArrayList<>();
+        List<String> Lis2 = new ArrayList<>();
+        Lis1.add("a");
+        Lis1.add("b");
+        Lis2.add("a");
+        Lis2.add("b");
+        assertArrayEquals(new String[]{"a","a","b","b"}, ListExamples.merge(Lis1, Lis2).toArray());
+    }
 }
 
 class Checker implements StringChecker{
