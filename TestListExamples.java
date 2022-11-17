@@ -6,7 +6,7 @@ import java.util.List;
 
 public class TestListExamples {
   // Write your grading tests here!
-  @Test
+    @Test(timeout = 100)
     public void testFilter(){
         List<String> Lst = new ArrayList<>();
         StringChecker sc = new Checker();
@@ -18,7 +18,7 @@ public class TestListExamples {
         assertArrayEquals(new String[]{"xyz","zab"}, ListExamples.filter(Lst, sc).toArray());
     }
 
-    @Test
+    @Test(timeout = 100)
     public void testMerge(){
         List<String> Lis1 = new ArrayList<>();
         List<String> Lis2 = new ArrayList<>();
