@@ -22,9 +22,9 @@ cd student-submission
 set +e
 javac -cp ".:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar" *.java
 
-set -e
 if [[ $? == 0 ]]
 then
+    set -e
     java -cp ".:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar" org.junit.runner.JUnitCore TestListExamples > test-msg.txt
 else
     echo "compiling error! "
